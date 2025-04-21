@@ -1,0 +1,5 @@
+add_executable(Catch2_Tests catch2_tests.cpp)
+target_link_libraries(Catch2_Tests Catch2::Catch2WithMain Comparator)
+add_coverage_test(Catch2_Tests)
+catch_discover_tests(Catch2_Tests)
+set_target_properties(Catch2_Tests PROPERTIES FOLDER "tests/Catch2")

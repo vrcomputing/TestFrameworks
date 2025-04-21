@@ -1,0 +1,5 @@
+add_executable(gtest_tests gtest_tests.cpp)
+target_link_libraries(gtest_tests gtest_main Comparator)
+add_coverage_test(gtest_tests)
+gtest_discover_tests(gtest_tests)
+set_target_properties(gtest_tests PROPERTIES FOLDER "tests/gtest")
